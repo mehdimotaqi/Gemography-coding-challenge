@@ -3,6 +3,7 @@ package com.gemography.coding.challenge
 import android.app.Application
 import android.content.Context
 import com.gemography.coding.challenge.di.networkModule
+import com.gemography.coding.challenge.di.repositoryModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -15,9 +16,9 @@ class GemographyApplication: Application() {
         startKoin {
             androidLogger(Level.INFO)
             androidContext(this@GemographyApplication)
-            //Modules
             listOf(
-                networkModule
+                networkModule,
+                repositoryModule
             )
         }
     }
