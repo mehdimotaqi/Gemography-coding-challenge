@@ -9,10 +9,10 @@ data class RepositoryResponse(
 data class RepositoryItem(
     val name: String,
     val owner: RepositoryOwner,
-    val description: List<String>
+    val description: String
 )
 
 data class RepositoryOwner(
     val login: String,
-    val avatar_url: List<String>
+    val avatar_url: String
 )

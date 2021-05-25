@@ -2,6 +2,9 @@ package com.gemography.coding.challenge.data.network
 
 object NetworkConstant {
     const val NETWORK_TIMEOUT = 603333L
+    const val ERROR_MESSAGE = "Cannot proceed your request, please try again later"
+    const val OFFLINE_MESSAGE = "No connection, turn your connection active to process"
+    const val INCOMPLETE_RESULTS_ERROR = "Something wrong happened, please retry later"
     const val NETWORK_BASE_URL = "https://api.github.com/"
 }
 
