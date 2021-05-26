@@ -6,6 +6,7 @@ import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 import kotlin.math.sin
@@ -14,7 +15,7 @@ val networkModule = module {
 
 
     single {
-        MoshiConverterFactory.create()
+        GsonConverterFactory.create()
     }
 
     single {
@@ -29,7 +30,7 @@ val networkModule = module {
         Retrofit.Builder()
             .baseUrl(NetworkConstant.NETWORK_BASE_URL)
             .client(get<OkHttpClient>())
-            .addConverterFactory(get<MoshiConverterFactory>())
+            .addConverterFactory(get<GsonConverterFactory>())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     }

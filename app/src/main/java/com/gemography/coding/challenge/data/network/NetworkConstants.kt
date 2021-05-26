@@ -9,7 +9,7 @@ object NetworkConstant {
 }
 
 object GithubApiUrlConstant{
-    const val GET_REPOSITORIES = "repositories?"
+    const val GET_REPOSITORIES = "search/repositories?"
 }
 
 object QueriesGithubApiConstant{
@@ -19,7 +19,7 @@ object QueriesGithubApiConstant{
     const val PAGE = "page"
 }
 
-object GithubApiConstantQueriesValue{
+object ConstantQueriesValue{
     const val SORT_BY_STARTS = "stars"
     const val ORDER_BY_DESC = "desc"
 }

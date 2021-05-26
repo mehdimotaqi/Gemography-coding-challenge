@@ -1,6 +1,6 @@
 package com.gemography.coding.challenge.data.network
 
-import com.gemography.coding.challenge.data.network.entities.RepositoryResponse
+import com.gemography.coding.challenge.data.network.entities.ApiResponse
 import io.reactivex.Observable
 import io.reactivex.Observer
 import retrofit2.http.GET
@@ -14,6 +14,6 @@ interface GithubApi {
         @Query(QueriesGithubApiConstant.SORT) sort: String,
         @Query(QueriesGithubApiConstant.ORDER) order: String,
         @Query(QueriesGithubApiConstant.PAGE) page: Int
-    ): Observable<RepositoryResponse>
+    ): Observable<ApiResponse>
 
 }
